@@ -3,13 +3,11 @@ def train_model(n_epochs, model, trainLoader, valLoader, criterion, optimizer, d
     val_cost = []
 
     for epoch in range(n_epochs):
-        print(epoch)
         cost = 0
         for batch, (cine, cine_gt, de, de_gt) in enumerate(trainLoader):
             x1, y1 = cine.to(device), cine_gt.to(device)
             x2, y2 = de.to(device), de_gt.to(device)
             pred1, pred2 = model(x1, x2)
-            # print(pred1.shape, pred2.shape)
             loss1 = criterion(pred1, y1)
             loss2 = criterion(pred2, y2)
             loss = loss1 + loss2

@@ -1,7 +1,7 @@
 def train_model(n_epochs, model, trainLoader, valLoader, criterion, optimizer, device):
     train_cost = []
     val_cost = []
-    # no branch
+    # ouffff
     for epoch in range(n_epochs):
         cost = 0
         for batch, (cine, cine_gt, de, de_gt) in enumerate(trainLoader):

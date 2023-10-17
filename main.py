@@ -5,7 +5,7 @@ from models.model import FIUNet
 from models.train_model import train_model
 from data_management.utils import DiceLoss
 
-PATH = "C:/Users/Cylia/Desktop/datasets/CINEDE"
+PATH = ""
 N_EPOCHS = 5
 device = torch.device("cpu")
 
